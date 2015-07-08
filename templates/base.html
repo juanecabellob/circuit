@@ -32,9 +32,18 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'users:profile' pk=request.user.pk %}">Profile</a></li>
-                            <li><a href="https://github.com/7Pros/circuit/blob/develop/MANUAL.md">Help</a></li>
-                            <li><a href="{% url 'users:logout' %}">Logout</a></li>
+                            <li><a href="{% url 'users:profile' pk=request.user.pk %}" style="padding-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; margin-top: 15px; !important;">
+                                    <span class="mdi-social-person"></span>
+                                    <span style="position: relative !important; top: -4px !important;">Profile</span>
+                            </a></li>
+                            <li><a href="https://github.com/7Pros/circuit/blob/develop/MANUAL.md" style="padding-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; margin-top: 15px; !important;">
+                                    <span class="mdi-action-help" ></span>
+                                    <span style="position: relative !important; top: -4px !important;">Help</span>
+                            </a></li>
+                            <li><a href="{% url 'users:logout' %}" style="padding-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 0 !important; margin-top: 15px; !important;">
+                                <span class="mdi-action-exit-to-app"></span>
+                                <span style="position: relative !important; top: -4px !important;">Logout</span>
+                            </a></li>
                         {% else %}
                             <li><a href="https://github.com/7Pros/circuit/blob/develop/MANUAL.md">Help</a></li>
                             {% if request.get_full_path != '/users/signup/' %}
