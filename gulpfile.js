@@ -22,6 +22,7 @@ gulp.task('js', function () {
     return gulp.src([
         './assets/vendor/jquery/dist/jquery.js',
         './assets/vendor/bootstrap/dist/js/bootstrap.js',
+        './assets/vendor/bootstrap/dist/js/bootstrap.js',
         './assets/vendor/bootstrap-material-design/dist/js/material.js',
         './assets/vendor/bootstrap-material-design/dist/js/ripples.js',
         './assets/vendor/vue/dist/vue.js',
@@ -33,6 +34,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('copy', function () {
-    return gulp.src('assets/vendor/bootstrap-material-design/fonts/*')
+    return gulp.src(['assets/vendor/bootstrap-material-design/fonts/*',
+    'assets/vendor/bootstrap/dist/fonts/*'])
         .pipe(gulp.dest('./circuit/static/fonts'));
 });
