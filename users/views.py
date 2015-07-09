@@ -354,7 +354,7 @@ def send_notifications(user, email_subject, email_template, context, post=None):
     @param context: the contents of the notification.
     @param post: In case it is a post-related notification will be a post instance.
     """
-    # email_notification_for_user(user, email_subject, email_template, context)
+    email_notification_for_user(user, email_subject, email_template, context)
     if post is not None:
         new_notification = Notification(message=context['content'], status=False, user=user, post=post, type=1)
     else:

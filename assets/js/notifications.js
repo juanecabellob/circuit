@@ -84,7 +84,7 @@ function addNotification(notification) {
                 hide: 'false',
                 delay: '5000',
                 opacity: .8,
-                icon: 'mdi-action-info',
+                icon: 'mdi-social-notifications-on',
                 buttons: {
                     sticker: false,
                     sticker_hover: false
